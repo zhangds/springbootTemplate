@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/booster/booster.iml" filepath="$PROJECT_DIR$/booster/booster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springbootTemplate.iml" filepath="$PROJECT_DIR$/.idea/springbootTemplate.iml" />
     </modules>
   </component>
