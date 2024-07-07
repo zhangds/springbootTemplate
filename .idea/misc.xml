@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/parent/pom.xml" />
         <option value="$PROJECT_DIR$/booster/pom.xml" />
+        <option value="$PROJECT_DIR$/configure/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,10 +1,11 @@
 package org.team.springboot.configure;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import javax.annotation.Resource;
 
 /**
  * @author zhangds
@@ -15,14 +16,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class CustomWebMvcConfigurerAdapter implements WebMvcConfigurer {
 
-    @Autowired
+    @Resource
     WebInterceptor webInterceptor;
 
 //    @Autowired
 //    AccessLimitInterceptor accessLimitInterceptor;
 
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(webInterceptor).excludePathPatterns("/","/error","/static/**","/swagger**/**").addPathPatterns("/**");
+        registry.addInterceptor(webInterceptor).excludePathPatterns("/","/error","/static/**","/swagger**/**","/webjars/springfox**/**").addPathPatterns("/**");
 //        registry.addInterceptor(accessLimitInterceptor);
 
     }

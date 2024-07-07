@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.http.HttpStatus;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import lombok.extern.slf4j.Slf4j;
@@ -20,8 +21,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @date 2024/7/5
  * @Notes
  **/
-//@EnableAutoConfiguration
-//@EnableScheduling
+
+@EnableScheduling
 @EnableAsync
 @EnableTransactionManagement
 @EnableSwagger2

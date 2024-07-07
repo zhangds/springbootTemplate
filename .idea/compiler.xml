@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="booster" />
+        <module name="configure" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="booster" target="1.8" />
+      <module name="configure" target="1.8" />
       <module name="parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>
