@@ -10,8 +10,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.team.springboot.booster.BootTempApp;
 import org.team.springboot.enums.DbTypeToDriverEnums;
 
-import javax.annotation.Resource;
-
 /**
  * @author zhangds
  * @date 2024/7/8
