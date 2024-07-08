@@ -247,6 +247,14 @@
                 </executions>
             </plugin>
         </plugins>
+<!--            <resources>-->
+<!--                <resource>-->
+<!--                    <directory>src/test</directory>-->
+<!--                    <excludes>-->
+<!--                        <exclude>java/**</exclude>-->
+<!--                    </excludes>-->
+<!--                </resource>-->
+<!--            </resources>-->
 <!--        <resources>-->
 <!--            <resource>-->
 <!--                <directory>src/main/resources</directory>-->
