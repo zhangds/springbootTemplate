@@ -47,5 +47,7 @@ public class TestDataBaseListService {
         Assert.assertNotNull(all);
         Assert.assertEquals(all.getCnName(), "元数据库");
         System.out.println(all.getCnName());
+        all = dataBaseListService.getDbInfo(dbId+"111");
+        Assert.assertNull(all);
     }
 }
