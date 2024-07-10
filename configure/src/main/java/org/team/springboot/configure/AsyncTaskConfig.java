@@ -24,13 +24,14 @@ import java.util.concurrent.Executor;
 @Data
 public class AsyncTaskConfig implements AsyncConfigurer {
 
+    public static final String DEFAULT_ASYNC_TASK_BEAN_NAME = "default_async_Executors";
     int corePoolSize;
     int maxPoolSize;
     int queueCapacity;
     int awaitTerminationSeconds;
     String threadNamePrefix;
 
-    @Bean
+    @Bean(DEFAULT_ASYNC_TASK_BEAN_NAME)
     public Executor getAsyncExecutor() {
         ThreadPoolTaskExecutor threadPool = new ThreadPoolTaskExecutor();
         //设置核心线程数
