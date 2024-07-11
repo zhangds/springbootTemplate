@@ -1,0 +1,19 @@
+create table sys_dblist
+(
+    DB_ID varchar(32) not null comment '数据库ID'
+        primary key,
+    DB_NAME varchar(32) null comment '数据库名称',
+    DB_CNNAME varchar(64) null comment '中文名称',
+    DRIVER_CLASSNAME varchar(256) null comment '驱动名',
+    URL varchar(512) null comment 'URL',
+    USER_NAME varchar(64) null comment '用户名',
+    PASSWORD varchar(256) null,
+    DB_TYPE varchar(16) null comment 'MYSQL、ORACLE',
+    DB_FLAG varchar(32) null comment '开发、测试、正式',
+    EFF_TIME datetime null comment '生效时间',
+    STATE varchar(8) null comment '状态',
+    STATE_TIME datetime null comment '状态时间',
+    REMARK varchar(512) null comment '备注',
+    constraint ind_dblist_dbname
+        unique (DB_NAME)
+)comment 'SYS--数据库配置' ENGINE=InnoDB;

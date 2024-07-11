@@ -34,14 +34,15 @@ public class DataBaseListServiceAspect {
         System.out.println("Method " + joinPoint.getSignature().getName() + " returned: " + JSON.toJSONString(result));
     }
 
-    // 修改参数
-    @Around("execution(* org.team.springboot.service.DataBaseListService.*(..))")
+    // 修改参数并执行,可以阻断执行
+    //@Around("execution(* org.team.springboot.service.DataBaseListService.*(..))")
     public Object logAndModifyParams(ProceedingJoinPoint joinPoint) throws Throwable {
         // 获取原始参数
         Object[] args = joinPoint.getArgs();
         if (args.length > 0 && args[0] instanceof String) {
             String originalInput = (String) args[0];
             // 修改参数
+            System.out.println("Original1 input: " + originalInput);
             String modifiedInput = originalInput.toUpperCase();
             args[0] = modifiedInput;
         }
